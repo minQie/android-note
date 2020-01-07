@@ -1,0 +1,7 @@
+# myeclipse文件
+.classpath
+.settings/
+
+# 编译产物
+*.class
+*.apk

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wmc.note.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/headLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#6A5ACD"
+        android:layout_alignParentTop="true" >
+		<EditText
+			android:id="@+id/name"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginStart="16dp"
+			android:layout_marginLeft="16dp"
+			android:textSize="18sp"
+			android:background="@null"
+			style="?android:attr/textViewStyle"
+			android:hint="@string/addHint1"
+			android:gravity="center_vertical"
+			android:singleLine="true"
+			android:maxLength="10" />
+	</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/addCancelButton"
+            android:onClick="addCancelButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#DEDEDE"
+            style="?android:attr/buttonStyle"
+            android:text="@string/cancel" />
+        <Button
+            android:id="@+id/addSureButton"
+            android:onClick="addSureButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3BB7B8"
+            style="?android:attr/buttonStyle"
+            android:text="@string/sure" />
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/content"
+        android:hint="@string/addHint2"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:layout_below="@id/headLinearLayout"
+		android:layout_above="@id/bottomLinearLayout" />
+    
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	tools:context="wmc.note.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/bottomLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3BB7B8"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/showButton"
+            android:onClick="showButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#6A5ACD"
+            style="?android:attr/buttonStyle"
+            android:text="@string/show" />
+        <Button
+            android:id="@+id/otherButton"
+            android:onClick="otherButtonClick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#6A5ACD"
+            style="?android:attr/buttonStyle"
+            android:text="@string/other" />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+	    android:layout_above="@id/bottomLinearLayout" >
+    </FrameLayout>
+
+</RelativeLayout>
